@@ -1,0 +1,20 @@
+.footer {
+  color: white;
+  min-height: 100px;
+  background: navy;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 2.5%;
+}
+
+.footer span {
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 0.5%;
+  margin-bottom: 0.5%;
+  padding-bottom: 1%;
+}

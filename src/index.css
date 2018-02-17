@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	background: #3b7d7c; /* Old browsers */
+	background: -moz-linear-gradient(left, #3b7d7c 0%, #47a39b 28%, #47a39b 28%, #52b0a7 44%, #52b0a7 44%, #96d0c9 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #3b7d7c 0%,#47a39b 28%,#47a39b 28%,#52b0a7 44%,#52b0a7 44%,#96d0c9 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #3b7d7c 0%,#47a39b 28%,#47a39b 28%,#52b0a7 44%,#52b0a7 44%,#96d0c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b7d7c', endColorstr='#96d0c9',GradientType=1 ); /* IE6-9 */
+}
+
+html,
+body,
+#root,
+div[data-reactroot] {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
