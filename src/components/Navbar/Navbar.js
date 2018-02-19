@@ -7,9 +7,10 @@ const Navbar = props =>
   <nav className="navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
-        <Link className="navbar-brand" to="/">
-          Japanese Printfinder
-        </Link>
+      	  <p class="japanese"> 
+北斎メモリゲーム</p>
+          <p class="english">j a p a n e s e ˚ p r i n t f i n d e r</p>
+
       </div>
     </div>
   </nav>;
