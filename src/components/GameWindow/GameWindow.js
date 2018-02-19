@@ -19,83 +19,64 @@ import image16 from "./images/16.jpg"
 
 var score = 0;
 
-var topScore = 0;
+  var topScore = 0;
 
-var images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16]
+  var images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16]
 
-var random = []
+  var random = []
 
-var i = 1
+  var i = 1
 
-while (i<17) {
-  var hit = images[Math.floor(Math.random() * images.length)];
-  random.push(hit);
-  var index = images.indexOf(hit);
-  if (index > -1) {
-      images.splice(index, 1)
-    };
-  i++;
-};
+  while (i<17) {
+      var hit = images[Math.floor(Math.random() * images.length)];
+      random.push(hit);
+      var index = images.indexOf(hit);
+      if (index > -1) {
+          images.splice(index, 1)
+      };
+      i++;
+  };
 
-function tally(image) {
-	var score = 0;
 
-	var topScore = 0;
-
-	var images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16]
-
-	var random = []
-
-	var i = 1
-
-	while (i<17) {
-  		var hit = images[Math.floor(Math.random() * images.length)];
-  		random.push(hit);
-  		var index = images.indexOf(hit);
-  		if (index > -1) {
-      		images.splice(index, 1)
-    	};
-  		i++;
-	};
-	if (this.state.clicked == "no") {
+function tally() {
+	this.tally = this.tally.bind(this)
+	if (this.state === "not_clicked") {
 		score++;
-		this.setState == "yes"
+		this.setState === "clicked"
+		console.log(this.state)
 	}
-	else if (this.state.clicked =="yes") {
+	else if (this.state === "clicked") {
 		score = 0;
+		console.log(this.state)
 	}
-	
 };
 
 const GameWindow = () =>
-		<div class = "window">
-			<div id = "choices">
-				<div>
-					<img onClick = {this.tally} src = {random[0]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[1]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[2]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[3]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-				</div>
-				<div>
-					<img onClick = {this.tally} src = {random[4]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[5]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[6]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[7]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-				</div>
-				<div>
-					<img onClick = {this.tally} src = {random[8]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[9]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[10]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[11]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-				</div>
-				<div>
-					<img onClick = {this.tally} src = {random[12]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[13]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[14]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-					<img onClick = {this.tally} src = {random[15]} alt = "Art by Hokusai" width = "175px" height = "175px"/>
-				</div>
-			</div>
+	<div>
+		<div>
+			<img onClick = {this.tally} src = {random[0]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[1]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[2]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[3]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
 		</div>
+		<div>
+			<img onClick = {this.tally} src = {random[4]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[5]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[6]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[7]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+		</div>
+		<div>
+			<img onClick = {this.tally} src = {random[8]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[9]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[10]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[11]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+		</div>
+		<div>
 
-
+			<img onClick = {this.tally} src = {random[12]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[13]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[14]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+			<img onClick = {this.tally} src = {random[15]} alt = "Image by Hokusai" height = "150px" state = "not_clicked" width = "150px"/>
+		</div>
+	</div>
 export default GameWindow
